@@ -136,24 +136,24 @@ if(xDir == 0 &amp;&amp; yDir == 0 &amp;&amp; walkedDirUD &lt;0){
     sprite_index = spr_player_idleBack;
 }
 
-if(xDir &gt; 0 &amp;&amp; yDir == 0 &amp;&amp; walkedDirLR &gt;0){
+if(xDir &gt; 0  &amp;&amp; walkedDirLR &gt;0){
     image_speed = 0.5;
     image_xscale = 1;
     sprite_index = spr_player_run;
 }
 
-if(xDir &lt; 0 &amp;&amp; yDir == 0 &amp;&amp; walkedDirLR &lt;0){
+if(xDir &lt; 0 &amp;&amp; walkedDirLR &lt;0){
     image_speed = 0.5;
     image_xscale = -1;
     sprite_index = spr_player_run;
 }
 
-if(xDir == 0 &amp;&amp; yDir &lt; 0 &amp;&amp; walkedDirUD &lt;0){
+if( yDir &lt; 0 &amp;&amp; walkedDirUD &lt;0){
     image_speed = 0.5;
     sprite_index = spr_player_runBack;
 }
 
-if(xDir == 0 &amp;&amp; yDir &gt; 0 &amp;&amp; walkedDirUD &gt;0){
+if(yDir &gt; 0 &amp;&amp; walkedDirUD &gt;0){
     image_speed = 0.5;
     sprite_index = spr_player_runFront;
 }
