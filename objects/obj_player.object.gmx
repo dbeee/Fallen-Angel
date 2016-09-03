@@ -8,6 +8,36 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//character properties
+maxHealth = 5;
+health = maxHealth;
+
+movSpeed = 4;
+currSpeed = movSpeed;
+
+attackSpeed = 1;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -25,9 +55,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var xDir, yDir, movSpeed;
-
-movSpeed = 4;
+            <string>var xDir, yDir;
 
 //if D is pressed returns 1 if not returns 0
 xDir = keyboard_check(ord('D')) - keyboard_check(ord('A'));
@@ -42,8 +70,8 @@ if(yDir==0)
 var dir = point_direction(0,0,xDir, yDir);
    
 if( xDir != 0 or yDir != 0){
-    x += lengthdir_x(movSpeed, dir);
-    y += lengthdir_y(movSpeed, dir);
+    x += lengthdir_x(self.movSpeed, dir);
+    y += lengthdir_y(self.movSpeed, dir);
 }
 
 </string>
