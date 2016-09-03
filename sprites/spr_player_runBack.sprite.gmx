@@ -8,7 +8,7 @@
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
   <bbox_left>0</bbox_left>
-  <bbox_right>13</bbox_right>
+  <bbox_right>12</bbox_right>
   <bbox_top>0</bbox_top>
   <bbox_bottom>27</bbox_bottom>
   <HTile>0</HTile>
@@ -26,6 +26,5 @@
     <frame index="3">images\spr_player_runBack_3.png</frame>
     <frame index="4">images\spr_player_runBack_4.png</frame>
     <frame index="5">images\spr_player_runBack_5.png</frame>
-    <frame index="6">images\spr_player_runBack_6.png</frame>
   </frames>
 </sprite>
