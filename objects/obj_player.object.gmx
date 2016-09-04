@@ -27,9 +27,11 @@
             <kind>1</kind>
             <string>//character properties
 maxHealth = 5;
-health = maxHealth;
+currHeath = maxHealth;
 
-movSpeed = 4;
+maxMovSpeed = 4; //terminal velocity
+movFriction = 0.02;
+accel = .6;
 currSpeed = 0;
 xDir = 0;
 yDir = 0;
@@ -74,8 +76,8 @@ if(yDir==0)
 var dir = point_direction(0,0,xDir, yDir);
    
 if( xDir != 0 || yDir != 0){
-    if(self.currSpeed&lt;self.movSpeed)
-        self.currSpeed += 0.6;
+    if(self.currSpeed&lt;self.maxMovSpeed)
+        self.currSpeed += accel - movFriction * currSpeed * currSpeed;
     x += lengthdir_x(self.currSpeed, dir);
     y += lengthdir_y(self.currSpeed, dir);
 
